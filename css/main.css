@@ -1,0 +1,191 @@
+/* ================= Start fonts ================= */
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../webfonts/Pacifico-Regular.woff2') format('woff2'),
+        url('../webfonts/Pacifico-Regular.woff') format('woff'),
+        url('../webfonts/Pacifico-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans Caption';
+    src: url('../webfonts/PTSans-Caption.woff2') format('woff2'),
+        url('../webfonts/PTSans-Caption.woff') format('woff'),
+        url('../webfonts/PTSans-Caption.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Righteous';
+    src: url('../webfonts/Righteous-Regular.woff2') format('woff2'),
+        url('../webfonts/Righteous-Regular.woff') format('woff'),
+        url('../webfonts/Righteous-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bree Serif';
+    src: url('../webfonts/BreeSerif-Regular.woff2') format('woff2'),
+        url('../webfonts/BreeSerif-Regular.woff') format('woff'),
+        url('../webfonts/BreeSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* ================= End fonts ================= */
+
+:root {
+    /* Start Font Variables */
+    --header-font: 'Pacifico';
+    --secondary-font: 'Righteous';
+    --main-font: 'PT Sans Caption';
+    --modal-header-font: 'Bree Serif';
+    /* End Font Variables */
+}
+/* ================= Start Root Classes ================= */
+
+
+/* Start Font classes */
+
+.header-font {
+    font-family: var(--header-font);
+}
+
+.secondary-font {
+    font-family: var(--secondary-font);
+}
+
+.main-font {
+    font-family: var(--main-font);
+}
+
+.modal-header-font {
+    font-family: var(--modal-header-font);
+}
+
+/* End Font classes */
+
+
+
+
+/* ================= End Root Classes ================= */
+
+
+
+
+/* ================== Start General Classes  ================== */
+.section-padding {
+    padding: 7rem 0;
+}
+
+
+/* ================== End General Classes ================== */
+body
+{
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    width: fit-content;
+}
+
+h1::after{
+    content: "";
+    width: 100%;
+    height: 20%;
+    background-color: #FEC260;
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+h1:hover::after{
+    height: 42%;
+}
+
+h2.header{
+    border-top: 2px dotted black;
+    background: linear-gradient(90deg, #40A55C, #B3AC49);
+    background-clip: text;
+    color: transparent;
+}
+
+/* =============== Start Form Style ============== */
+
+button.submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 .25rem #fec26055;
+}
+/* =============== End Form Style ============== */
+
+/* =============== Start table Style ============== */
+section.products-table
+{
+    border-top: 2px dotted;
+}
+
+td
+{
+    vertical-align: middle;
+}
+
+button.visit
+{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+
+    a{
+        all: unset;
+    }
+}
+
+button.delete
+{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+/* =============== End table Style ============== */
+
+/* =============== Start Modal Style ============== */
+button#modalBtn
+{
+    display: none;
+}
+
+.modal li
+{
+    font-size: 1.11rem;
+}
+/* =============== End Modal Style ============== */

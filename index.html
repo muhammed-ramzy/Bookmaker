@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
+
+    <!-- FontAwesome icons css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- My Animaition css file -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- My Media Query css file -->
+    <link rel="stylesheet" href="css/media.css">
+    <!-- My Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Start Products form -->
+    <div class="container">
+        <h1 class="text-center py-3 display-4 header-font mx-auto my-5">Bookmarker</h1>
+        <h2 class="header text-center secondary-font pt-4 mb-4"><i class="fa-solid fa-bookmark"></i> Bookmark your
+            favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+
+        <div class="row">
+            <!-- Form -->
+            <div class="item">
+                <div class="products-form p-0 border-3 rounded">
+                    <i class="fa-solid fa-book-bookmark pe-2"></i><label for="siteName"
+                        class="main-font fw-bold mb-2">Site Name</label>
+                    <input type="text" placeholder="Bookmark Name" oninput="validateInput(this)"
+                        class="form-control mb-4" id="siteName">
+                    <div class="alert d-none alert-danger py-1">
+                        <p class="my-0">The name must start with a capital letter and more than one character</p>
+                    </div>
+
+                    <i class="fa-solid fa-link pe-2"></i><label for="siteUrl" class="main-font fw-bold mb-2">Site
+                        URL</label>
+                    <input type="url" placeholder="Website URL" oninput="validateInput(this)" class="form-control mb-4"
+                        id="siteUrl">
+                    <div class="alert d-none alert-danger py-1">
+                        <p class="my-0">The price must be between $6000 and $60000</p>
+                    </div>
+
+                    <button onclick="addNewBookmark()"
+                        class="btn d-block mb-2 text-white px-5 fw-medium mx-auto  submit"
+                        id="submitBtn">Submit</button>
+
+                </div>
+            </div>
+
+            <!-- Table -->
+            <section class="row gy-3 bookmark-table pt-2 main-font">
+                <table class="table text-center">
+                    <thead>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="bookmarkTableBody">
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+
+
+        <!-- Button trigger modal -->
+        <button id="modalBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-3 pb-0">
+                    <div class="modal-header border-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"><i
+                                class="fa-solid fa-circle text-danger me-2"></i><i
+                                class="fa-solid fa-circle text-warning me-2"></i><i
+                                class="fa-solid fa-circle text-success"></i></h1>
+                        <button type="button" class="close border-0 bg-transparent ms-auto" data-bs-dismiss="modal"
+                            aria-label="Close"><i class="fa-solid fa-xmark close fs-3"></i></button>
+                    </div>
+                    <div class="modal-body ">
+                        <h3 class="modal-header-font fs-5 mb-4">Site Name or Url is not valid, Please follow the rules
+                            below:</h3>
+                        <ul class="list-unstyled">
+                            <li class="main-font  mb-3 ms-2"><i
+                                    class="fa-solid fa-circle-arrow-right text-danger me-1"></i> Site name must contain
+                                at least 3 characters</li>
+                            <li class="main-font  ms-2"><i class="fa-solid fa-circle-arrow-right text-danger me-1"></i>
+                                Site URL must be a valid one</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End Products form -->
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+
+</html>
