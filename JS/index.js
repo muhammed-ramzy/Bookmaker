@@ -16,7 +16,7 @@ var bookmarkContainer = [];
 function validateInput(element) {
     var regex = {
         siteName: /^[\w]{3,}$/,
-        siteUrl: /^(https?:\/\/)?(www\.)?([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+)(\/[a-zA-Z0-9-._~:\/?#[\]@!$&'()*+,;=]*)?$/
+        siteUrl: /^((http)s?:\/\/)?(www\.)[a-zA-Z0-9-]+\.([a-zA-Z]{2,})$/
     }
 
     //validating the input
